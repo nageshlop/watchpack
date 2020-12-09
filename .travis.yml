@@ -40,7 +40,35 @@ matrix:
     - os: osx
       node_js: "10"
       stage: advanced
-
+#ppc64le support code
+    - os: linux
+      arch: ppc64le
+      node_js: "14"
+      stage: basic
+    - os: linux
+      arch: ppc64le
+      node_js: "14"
+      env: WATCHPACK_POLLING=200
+      stage: advanced
+    - os: linux
+      arch: ppc64le
+      node_js: "12"
+      stage: advanced
+    - os: linux
+      arch: ppc64le
+      node_js: "12"
+      env: WATCHPACK_POLLING=200
+      stage: advanced
+    - os: linux
+      arch: ppc64le
+      node_js: "10"
+      stage: advanced
+    - os: linux
+      arch: ppc64le
+      node_js: "10"
+      env: WATCHPACK_POLLING=200
+      stage: advanced
+      
 script:
   - yarn cover --report lcovonly
 
